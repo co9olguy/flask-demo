@@ -2,14 +2,30 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Hello, World!</title>
+		<title>Stockinator stock price graphs</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="http://cdn.pydata.org/bokeh/release/bokeh-0.11.0.min.css" type="text/css" />
+   		<script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-0.11.0.min.js"></script>
 	</head>
 	<body>
 		<div>
-  			<h1>Hello, World!</h1>
+			<h1>Stockinator™ stock price graphs</h1>
+  			<p>Input a stock ticker to track (e.g., GOOG, AAPL, MSFT, IBM) and desired options</p>
+  			<form id='input' method='post' action='plot'>	
+	  			<p>
+					Ticker symbol: <input type='text' name='dataset_code' />
+	  			</p>
+	  			<p>
+					<input type="checkbox" name='close' value='Close'>Closing price<br>
+					<input type="checkbox" name='adj_close' value='Adj. Close'>Adjusted closing price<br>
+					<input type="checkbox" name='open' value='Open'>Opening price<br>
+					<input type="checkbox" name='adj_open' value='Adj. Open'>Adjusted opening price<br>
+	    				<input type="submit" value="Submit">
+	  			</p>
+			</form>
+  			<p>Data provided by QUANDL</p>
 		</div>
 	</body>
 </html>
